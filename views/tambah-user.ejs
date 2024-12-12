@@ -1,0 +1,30 @@
+<!-- views/tambah-user.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah User</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Tambah User</h1>
+    <form action="/tambah-user" method="post">
+      <div class="form-group">
+        <label for="nama">Nama</label>
+        <input type="text" class="form-control" id="nama" name="nama" required>
+      </div>
+      <div class="form-group">
+        <label for="login">Login</label>
+        <input type="text" class="form-control" id="login" name="login" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Tambah</button>
+    </form>
+  </div>
+</body>
+</html>
