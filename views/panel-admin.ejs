@@ -1,0 +1,44 @@
+<!-- views/panel-admin.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Admin</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Panel Admin</h1>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="/panel-admin">User</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tambah-user">Tambah User</a>
+      </li>
+    </ul>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Login</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach((user) => { %>
+          <tr>
+            <td><%= user.nama %></td>
+            <td><%= user.login %></td>
+            <td>
+              <a href="/lihat-password/<%= user._id %>">Lihat Password</a>
+              <a href="/hapus-user/<%= user._id %>">Hapus</a>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
