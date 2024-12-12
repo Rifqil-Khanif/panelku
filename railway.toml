@@ -1,0 +1,10 @@
+[env]
+DATABASE_URL = "mongodb://localhost:27017/mydatabase"
+
+[build]
+command = "npm run build"
+
+[deploy]
+  platform = "node"
+  framework = "express"
+  port = 8080
