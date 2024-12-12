@@ -17,6 +17,6 @@
     "mongodb": "^3.6.4",
     "mongoose": "^5.12.3",
     "express-session": "^1.17.2",
-    "os-utils": "^1.0.0"
+    "os-utils": "^0.0.4"
   }
 }
